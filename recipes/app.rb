@@ -21,6 +21,10 @@ directory "#{app_dir}/test/smoke/default" do
   recursive true
 end
 
+directory "#{app_dir}/test/integration/default" do
+  recursive true
+end
+
 template "#{app_dir}/test/smoke/default/default_test.rb" do
   source 'inspec_default_test.rb.erb'
   helpers(ChefDK::Generator::TemplateHelper)
